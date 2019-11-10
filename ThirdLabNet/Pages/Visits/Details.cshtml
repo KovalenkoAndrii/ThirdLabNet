@@ -18,11 +18,51 @@
             @Html.DisplayFor(model => model.Visit.Client.Id)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.Visit.Client.AccountNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visit.Client.AccountNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visit.Client.FullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visit.Client.FullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visit.Client.PassportNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visit.Client.PassportNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visit.Client.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visit.Client.Address)
+        </dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
             @Html.DisplayNameFor(model => model.Visit.Operation)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Visit.Operation.Id)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visit.Operation.Contribution)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visit.Operation.Contribution)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visit.Operation.Payment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visit.Operation.Payment)
+        </dd>
+    </dl>
+    <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Visit.VisitDate)
         </dt>

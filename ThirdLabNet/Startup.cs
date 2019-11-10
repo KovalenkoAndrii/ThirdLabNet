@@ -24,10 +24,7 @@ namespace ThirdLabNet
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //string connection = Configuration.GetConnectionString("DefaultConnection");
-            //services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
             services.AddEntityFrameworkSqlite().AddEntityFrameworkSqlite().AddDbContext<ApplicationContext>();
-
             services.AddMvc();
         }
 
@@ -36,7 +33,6 @@ namespace ThirdLabNet
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseBrowserLink();
             }
             else
             {
