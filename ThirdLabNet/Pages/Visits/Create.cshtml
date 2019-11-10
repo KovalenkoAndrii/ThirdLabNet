@@ -1,0 +1,42 @@
+﻿@page
+@model ThirdLabNet.Pages.Visits.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Visit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Visit.ClientId" class="control-label"></label>
+                <select asp-for="Visit.ClientId" class ="form-control" asp-items="ViewBag.ClientId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Visit.OperationId" class="control-label"></label>
+                <select asp-for="Visit.OperationId" class ="form-control" asp-items="ViewBag.OperationId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Visit.VisitDate" class="control-label"></label>
+                <input asp-for="Visit.VisitDate" class="form-control" />
+                <span asp-validation-for="Visit.VisitDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
